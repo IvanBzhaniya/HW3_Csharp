@@ -3,7 +3,7 @@
 Задача 19
 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-*/
+
 
 Console.WriteLine("input number ");
 int number = Convert.ToInt32(Console.ReadLine());;
@@ -27,3 +27,32 @@ else
 {
     Console.WriteLine("input 5-digit number");
 }
+
+
+Задача 21
+Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+*/
+
+double LongLineABC (int xA, int xB, int yA, int yB, int zA, int zB)
+{
+    double longLine = Math.Sqrt((xB - xA)*(xB - xA) + (yB - yA)*(yB - yA) + (zB - zA)*(zB - zA));
+    longLine = Math.Round(longLine, 2);
+    return longLine;
+}
+
+Console.WriteLine("input X ccord of A ");
+int xCoordA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input Y ccord of A ");
+int yCoordA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input Z ccord of A ");
+int zCoordA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input X ccord of B ");
+int xCoordB = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input X ccord of B ");
+int yCoordB = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input Z ccord of B ");
+int zCoordB = Convert.ToInt32(Console.ReadLine());
+
+double dist = LongLineABC(xCoordA, xCoordB, yCoordA, yCoordB, zCoordA, zCoordB);
+Console.WriteLine($"distance between A({xCoordA} + {yCoordA} + {zCoordA}) and B({xCoordB} + {yCoordB} + {zCoordB}) is {dist}");
